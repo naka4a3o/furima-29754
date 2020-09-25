@@ -62,7 +62,7 @@
 | house_number  	| string     	| null: false                    	|
 | building_name 	| string     	|                                	|
 | phone_number  	| integer    	| null: false                    	|
-| user          	| references 	| null: false, foreign_key: true 	|
+| buyer          	| references 	| null: false, foreign_key: true 	|
 
 ### Association
 

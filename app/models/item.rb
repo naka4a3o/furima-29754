@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :item_prefecture
   belongs_to_active_hash :scheduled_delivery
 
-    validates :name, :description, :category, :item_status, :shipping_bearer, :item_prefecture, :scheduled_delivery, :price, presence: true
+    validates :name, :description, :category_id, :item_status_id, :shipping_bearer_id, :item_prefecture_id, :scheduled_delivery_id, :price, :image, presence: true
     validates :price, format: {with: /\A[0-9]+\z/, message: "is invalid. Input half-width characters."}
     validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999, message: "is out of setting range"}
 

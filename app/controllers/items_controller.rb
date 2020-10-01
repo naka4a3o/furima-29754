@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @items = Item.all
+    @items = Item.includes(:user)
   end
 
   def new
@@ -10,12 +10,13 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params) # create => new , save
+    @item = Item.new(item_params) 
 
     if @item.valid?
       @item.save
       redirect_to root_path
     else
+      #@items = Item.includes(:user)
       render :new
     end
   end

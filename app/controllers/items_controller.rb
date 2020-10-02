@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @items = Item.all
+    @items = Item.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params) # create => new , save
+    @item = Item.new(item_params)
 
     if @item.valid?
       @item.save

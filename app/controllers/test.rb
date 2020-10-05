@@ -1,0 +1,10 @@
+{"authenticity_token"=>"FzWUF0LL4FrlSW48vvi4+eR4Lkie6vrM3Gc1/5q5F2tBagfOb6x8JPZKhWlDm0zTf1nPMSPDk3YBmGVD/Oy40g=="
+   "user_order"=>
+      {"postal_code"=>"123-4566"
+      "item_prefecture_id"=>"2"
+      "city"=>"横浜市"
+      "house_number"=>"青山1-1-1"
+      "building_name"=>"柳ビル"
+      "phone_number"=>"09012345675"
+      "token"=>"tok_429c5fb2aa6f3354b13d8a892d04"}
+ "item_id"=>"1"}

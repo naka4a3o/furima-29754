@@ -126,9 +126,7 @@
     <%= link_to '新規投稿商品', new_item_path, class: "subtitle" %>
     <ul class='item-lists'>
       <% if @items.present? %>
-
           <%= render partial: 'item', collection: @items %>
-
       <% else %>
           <%= render partial: 'dummy' %>
       <% end %> 

@@ -19,7 +19,6 @@ RSpec.describe UserOrder, type: :model do
       end
     end
 
-
     context '保存がうまくいかないとき' do 
       it 'postal_codeが空だと保存できないこと' do
         @user_order.postal_code = nil

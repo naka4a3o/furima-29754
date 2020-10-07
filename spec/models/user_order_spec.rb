@@ -20,7 +20,7 @@ RSpec.describe UserOrder, type: :model do
     it 'postal_codeが半角のハイフンを含んだ正しい形式でないと保存できないこと' do
       @user_order.postal_code = '1234567'
       @user_order.valid?
-      expect(@user_order.errors.full_messages).to include("Postal code is invalid. Include hyphen(-)")
+      expect(@user_order.errors.full_messages).to include('Postal code is invalid. Include hyphen(-)')
     end
     it 'item_prefecture_idを選択していないと保存できないこと' do
       @user_order.item_prefecture_id = 0
@@ -50,9 +50,9 @@ RSpec.describe UserOrder, type: :model do
     it 'phone_numberはハイフンは不要で、11桁を超過すると保存できないこと' do
       @user_order.phone_number = '090-1234-5678'
       @user_order.valid?
-      expect(@user_order.errors.full_messages).to include("Phone number is not a number")
+      expect(@user_order.errors.full_messages).to include('Phone number is not a number')
     end
-    it "tokenが空では登録できないこと" do
+    it 'tokenが空では登録できないこと' do
       @user_order.token = nil
       @user_order.valid?
       expect(@user_order.errors.full_messages).to include("Token can't be blank")

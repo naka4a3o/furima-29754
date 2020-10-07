@@ -6,7 +6,7 @@ function price() {
     
     const value = item_price.value
     if(value >= 300 && value <= 9999999){
-      let fee = value * 0.1
+      let fee = Math.floor(value * 0.1)
       let gain = value - fee;
       add_tax.innerHTML = fee;
       profit.innerHTML = gain;
